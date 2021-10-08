@@ -8,6 +8,7 @@ import (
 
 func GetNotif(echo *echo.Group) {
 
+	//membuat method get untuk memanggil getNotifikasi
 	echo.GET("/firebase", fcmfirebase.GetNotifikasiFCM)
-	echo.POST("/firebase", fcmfirebase.GetNotifikasiFCM)
+	// echo.POST("/firebase", fcmfirebase.GetNotifikasiFCM)
 }

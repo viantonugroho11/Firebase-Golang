@@ -46,6 +46,8 @@ func Init() *echo.Echo {
 		Do not change this code!!
 	--------------------------------------------------*/
 	g := e.Group("/event")
+
+	//inisialisasi Group Firebase
 	f	:= e.Group("/firebase")
 	/*-------------------------------------------------
 		DISABLING JWT CUZ API GW ALREADY DID THAT
@@ -64,6 +66,8 @@ func Init() *echo.Echo {
 	--------------------------------------------------*/
 
 	routelist.EventInstansi(g)
+	
+	//digunakan untuk memanggil router group Firebase
 	routelist.GetNotif(f)
 	return e
 }
